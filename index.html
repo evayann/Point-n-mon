@@ -7,21 +7,28 @@
     <title>Point'n'mon</title>
 
     <link rel="stylesheet" href="./style.css">
+    <script src="./core.js"></script>
 </head>
 <body>
     <h1 id="game-title"> Point'n'mon </h1>
 
     <div id="game">
-        <img id="gba" src="./assets/GBA.png" alt="The purple Game Boy Advance">
+        <img class="easter-egg" src="./assets/EasterEgg.png" alt="An easter egg" style="top: 34%; right: 9%;" role="button" onclick="openDialog('Felicitation, tu as découvert un secret de Point\'n\'mon !')"/>
+        <img id="gba" src="./assets/GBA.png" alt="The purple Game Boy Advance" />
         <div id="screen">
-            <div class="map">
-                <img src="./assets/Maps/0.png" alt="Begin">
-                <button class="gate" style="top: 40%; left: 30%" click="load()"> X </button>
+            <div id="dialog" class="hidden">
+                <p id="text-dialog"></p>
+                <button id="close-dialog" onclick="closeDialog()"> Fermer </button>
             </div>
 
-            <div class="map hidden">
+            <div id="0" class="map">
+                <img src="./assets/Maps/0.png" alt="Begin">
+                <button class="gate" style="top: 45%; left: 24%" onclick="loadMap(1)"> </button>
+            </div>
+
+            <div id="1" class="map hidden">
                 <img src="./assets/Maps/1.png" alt="Begin">
-                <button class="gate" style="top: 40%; left: 30%" click="load()"> X </button>
+                <button class="gate" style="top: 40%; left: 30%" onclick="loadMap(0)"> X </button>
             </div>
         </div>
     </div>
