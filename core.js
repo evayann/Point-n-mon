@@ -1,6 +1,7 @@
+const screen = document.getElementById("screen");
+
 function loadMap(id) {
     console.log("Load Map :", id);
-    const screen = document.getElementById("screen");
     for (let map of screen.children) {
         map.classList.toggle("hidden", +map.id !== id);
     }
@@ -17,4 +18,8 @@ function openDialog(content) {
 function closeDialog() {
     const dialog = document.getElementById("dialog");
     dialog.classList.add("hidden");
+}
+
+function responsiveWidth() {
+    
 }
