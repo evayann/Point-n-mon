@@ -1,12 +1,30 @@
 const gba = document.getElementById("gba");
 const screen = document.getElementById("screen");
+const battle = document.getElementById("battle");
 
+let previousScreen = 0;
+// Loading
 
 function loadMap(id) {
     console.log("Load Map :", id);
     for (let map of screen.children) {
+        if (! map.classList.contains("hidden"))
+            previousScreen = +map.id;
         map.classList.toggle("hidden", +map.id !== id);
     }
+}
+
+function loadBattle() {
+    console.log("Load Battle");
+    loadMap(-1);
+    battle.classList.remove("hidden");
+}
+
+function closeBattle() {
+    battle.classList.add("hidden");
+    const lastPrevious = previousScreen;
+    loadMap(lastPrevious);
+    previousScreen = lastPrevious;
 }
 
 function openDialog(content) {
@@ -21,6 +39,8 @@ function closeDialog() {
     const dialog = document.getElementById("dialog");
     dialog.classList.add("hidden");
 }
+
+// Screen Dimension 
 
 const rescalePx = (px, factor) => `${+px.replace("px", "") * factor}px`; 
 
