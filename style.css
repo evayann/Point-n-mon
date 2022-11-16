@@ -93,20 +93,11 @@ body::after {
 
 #screen {
     position: absolute;
-
-    width: 600px;
-    height: 45vh;
-
-    border-radius: 1.25rem;
-
     transform: translateY(-7.5%);
 }
 
-@media screen and (max-width: 1400px) {
-    #screen {
-        width: 43vw;
-        height: 43%;
-    }
+#screen > .map > .background {
+    border-radius: 1.25rem;
 }
 
 .hidden {
