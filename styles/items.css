@@ -1,0 +1,38 @@
+.item {
+    all: unset;
+    position: absolute;
+    cursor: pointer;
+}
+
+.item:hover {
+    opacity: 0.6;
+}
+
+.easter-egg {
+    position: absolute;
+    width: 32px !important;
+    height: unset !important;
+    aspect-ratio: 1 !important;
+}
+
+.easter-egg:hover {
+    opacity: 0.75;
+}
+
+.gate {
+    background: center / contain url("../assets/Compass.png") no-repeat;
+    width: 5%;
+    aspect-ratio: 1;
+}
+
+.player {
+    background: center / contain url("../assets/player.png") no-repeat;
+    width: 6%;
+    aspect-ratio: 1;
+}
+
+.npc {
+    background: center / contain url("../assets/npc.png") no-repeat;
+    width: 6%;
+    aspect-ratio: 1;
+}
