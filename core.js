@@ -46,8 +46,9 @@ const rescalePx = (px, factor) => `${+px.replace("px", "") * factor}px`;
 
 function responsiveScreen() {
     console.log("Change width screen");
-    const style = getComputedStyle(gba);
-    screen.style.width = rescalePx(style.width, 0.45);
+    let style = getComputedStyle(gba)
+    console.log("Gba size : ", style.width, "x", style.height);
+    screen.style.width = rescalePx(style.width, 0.455);
     screen.style.height = rescalePx(style.height, 0.55);
 }
 

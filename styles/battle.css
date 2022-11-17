@@ -1,5 +1,18 @@
 #battle {
-    background: green;
+    background:
+        radial-gradient(circle at 15% 70%, #008000 0%, #008000 20%, #256225 25%, transparent 100%),
+        radial-gradient(circle at 90% 20%, #008000 0%, #008000 20%, #256225 25%, transparent 100%);
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+}
+
+#battle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: black;
 }
 
 #battle > #battle-dialog {
@@ -43,4 +56,23 @@
 
 #battle > #battle-dialog > ul > li:hover {
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+#battle > .pkm {
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1;
+}
+
+#battle > #my-pkm {
+    top: 40%;
+    left: 0;
+}
+
+#battle > #opponent-pkm {
+    right: 0;
+}
+
+#battle > #exit-battle {
+    margin: 1%;
 }

@@ -9,48 +9,55 @@
     <link rel="stylesheet" href="./styles/background.css">
     <link rel="stylesheet" href="./styles/battle.css">
     <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/utils.css">
     <link rel="stylesheet" href="./styles/items.css">
     <link rel="stylesheet" href="./styles/text.css">
     <link rel="stylesheet" href="./style.css">
     <script src="./core.js" defer></script>
 </head>
 <body>
-    <h1 id="game-title"> Point'n'Mon </h1>
+    <div id="container">
+        <h1 id="game-title"> Point'n'Mon </h1>
 
-    <div id="game">
-        <img id="gba" src="./assets/GBA.png" alt="The purple Game Boy Advance" />
-        <div id="screen">
-            <div id="dialog" class="hidden">
-                <p id="text-dialog"></p>
-                <button id="close-dialog" onclick="closeDialog()"> Fermer </button>
-            </div>
-
-            <div id="battle" class="hidden">
-                <div id="battle-dialog">
-                    <ul>
-                        <li id="1" class="attack"> Attack 1 </li>
-                        <li id="2" class="attack"> Attack 2</li>
-                        <li id="3" class="attack"> Attack 3 </li>
-                        <li id="4" class="attack"> Attack 4</li>
-                    </ul>
+        <div id="game">
+            <img id="gba" src="./assets/GBA.png" alt="The purple Game Boy Advance" />
+            <button class="btn start-btn" onclick="loadMap(0)"> Start </button>
+            <div id="screen">
+                <div id="dialog" class="hidden">
+                    <p id="text-dialog"></p>
+                    <button id="close-dialog" class="btn" onclick="closeDialog()"> Fermer </button>
                 </div>
-                <button onclick="closeBattle()"> Exit battle </button>
-            </div>
+    
+                <div id="battle" class="hidden">
+                    <div id="battle-dialog">
+                        <ul>
+                            <li id="1" class="attack"> Attack 1 </li>
+                            <li id="2" class="attack"> Attack 2 </li>
+                            <li id="3" class="attack"> Attack 3 </li>
+                            <li id="4" class="attack"> Attack 4 </li>
+                        </ul>
+                    </div>
+                    
+                    <img src="./assets/pokemons/pikaBack.png" alt="Your pokemon" id="my-pkm" class="pkm" />
+                    <img src="./assets/pokemons/starossFront.png" alt="Oppenent pokemon" id="opponent-pkm" class="pkm" />
 
-            <div id="0" class="map">
-                <img class="background" src="./assets/Maps/0.png" alt="Begin">
-                <img class="item easter-egg" src="./assets/EasterEgg.png" alt="An easter egg" style="top: 0%; right: 0%;" role="button" onclick="openDialog('Felicitation, tu as découvert un secret de Point\'n\'mon !')"/>
-                <button class="item gate" style="top: 45%; left: 24%" onclick="loadMap(1)"> </button>
-                <button class="item player" style="bottom: 10%; left: 35%" onclick="openDialog('Je suis Sacha du Bourg Palette !')"></button>
-                <button class="item npc" style="top: 50%; left: 50%" onclick="loadBattle()"></button>
-            </div>
-
-            <div id="1" class="map hidden">
-                <img class="background" src="./assets/Maps/1.png" alt="Begin">
-                <button class="item gate" style="top: 40%; left: 30%" onclick="loadMap(0)"> </button>
+                    <button onclick="closeBattle()" id="exit-battle" class="btn"> Exit battle </button>
+                </div>
+    
+                <div id="0" class="map hidden">
+                    <img class="background" src="./assets/Maps/0.png" alt="Begin">
+                    <img class="item easter-egg" src="./assets/EasterEgg.png" alt="An easter egg" style="top: 0%; right: 0%;" role="button" onclick="openDialog('Felicitation, tu as découvert un secret de Point\'n\'mon !')"/>
+                    <button class="item gate" style="top: 45%; left: 24%" onclick="loadMap(1)"> </button>
+                    <button class="item player" style="bottom: 10%; left: 35%" onclick="openDialog('Je suis Sacha du Bourg Palette !')"></button>
+                    <button class="item npc" style="top: 50%; left: 50%" onclick="loadBattle()"></button>
+                </div>
+    
+                <div id="1" class="map hidden">
+                    <img class="background" src="./assets/Maps/1.png" alt="Begin">
+                    <button class="item gate" style="top: 40%; left: 30%" onclick="loadMap(0)"> </button>
+                </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
