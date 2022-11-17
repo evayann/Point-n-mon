@@ -1,13 +1,21 @@
 body {
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
-body::before {
+#container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 10% 85%; 
+    grid-template-areas: 
+        "game-title"
+        "game";
+    gap: 5% 0; 
+    justify-content: space-between; 
+}
+
+#container::before {
     content: '';
 
     position: absolute;
@@ -31,9 +39,12 @@ body::before {
     animation: stripeTransform var(--duration) linear infinite;
 }
 
-body::after {
+#container::after {
     content: '';
+
     position: absolute;
+    top: 0;
+    left: 0;
 
     pointer-events: none;
 

@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 600px) {
     * {
-        font-size: 10px;
+        font-size: 10px ! important;
     }
 }
 
@@ -15,43 +15,14 @@ body {
     margin: 0;
 }
 
-.hidden {
-    display: none;
+.start-btn {
+    position: absolute;
+    font-size: 16px;
+    margin-top: 4px;
 }
 
-#dialog > #close-dialog {
-    background: hsl(0, 100%, 73%);
-	color: white;
-	padding: .2em 1em;
-	border: none;
-	border-radius: 10em;
-	font-size: 16px;
-	text-transform: uppercase;
-	letter-spacing: .15em;
-	outline: none;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);;
-	text-shadow:  0 1px hsl(0, 0%, 80%),
-								0 2px hsl(0, 0%, 78%),
-								0 3px hsl(0, 0%, 75%),
-								0 3px 5px hsl(0, 0%, 0%, .4),
-								0 4px 20px hsl(0, 0%, 0%, .35);
-	box-shadow: 0 1px hsl(0, 100%, 75%),
-							0 2px hsl(0, 100%, 69%),
-							0 3px hsl(0, 100%, 68%),
-							0 4px hsl(0, 100%, 68%),
-							0 5px hsl(0, 100%, 68%),
-							0 6px hsl(0, 100%, 68%),
-							0 7px hsl(0, 100%, 68%),
-		
-							0 7px 10px hsla(0, 0%, 0%, .8),
-							0 9px 50px hsla(0, 0%, 0%, .5);
-}
-
-#dialog > #close-dialog:hover {
-    background: hsl(0, 100%, 72%);
-    box-shadow: none;
-    text-shadow: none;
-    transform: translateY(4px);
+@media screen and (max-width: 800px) {
+    .start-btn {
+        margin-top: 0px;
+    }
 }
