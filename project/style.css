@@ -15,14 +15,20 @@ body {
     margin: 0;
 }
 
-.start-btn {
+.gba-btns {
     position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    
     font-size: 16px;
     margin-top: 4px;
 }
 
 @media screen and (max-width: 800px) {
-    .start-btn {
+    .gba-btns {
         margin-top: 0px;
     }
 }

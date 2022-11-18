@@ -16,10 +16,40 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./core.js" defer></script>
 
+    <style>
+        #battle > .pkm-name {
+            position: absolute;
+        }
+
+        #battle > #my-pkm-name {
+            top: 50%;
+            left: 28%;
+        }
+
+        #battle > #opponent-pkm-name {
+            top: 0;
+            left: 58%;
+        }
+    </style>
+
     <script>
+        let gbaStart = false;
+
         function loadPokemonChoice() {
-            const pokemonChoiceScreen = document.getElementById("pkm-choice");
-            pokemonChoiceScreen.classList.remove("hidden");
+            if (! gbaStart) {
+                const pokemonChoiceScreen = document.getElementById("pkm-choice");
+                pokemonChoiceScreen.classList.remove("hidden");
+                gbaStart = true;
+            }
+        }
+
+        function shutdown() {
+            unloadMap();
+            const battle = document.getElementById("battle");
+            battle.classList.add("hidden");
+            const choice = document.getElementById("pkm-choice");
+            choice.classList.add("hidden");
+            gbaStart = false;
         }
     </script>
 </head>
@@ -29,7 +59,10 @@
 
         <div id="game">
             <img id="gba" src="./assets/GBA.png" alt="The purple Game Boy Advance" />
-            <button class="btn start-btn" onclick="loadPokemonChoice()"> Start </button>
+            <div class="gba-btns">
+                <button class="btn start-btn" onclick="loadPokemonChoice()"> Start </button>
+                <button class="btn start-btn" onclick="shutdown()"> Stop </button>
+            </div>
             <div id="screen">
                 <div id="dialog" class="hidden">
                     <p id="text-dialog"></p>
@@ -43,18 +76,22 @@
     
                 <div id="battle" class="hidden">
                     <div id="battle-dialog">
-                        <ul>
-                            <li id="attack-1" class="attack"> </li>
-                            <li id="attack-2" class="attack"> </li>
-                            <li id="attack-3" class="attack"> </li>
-                            <li id="attack-4" class="attack"> </li>
+                        <ul id="attack-choice">
+                            <li id="attack-1" class="attack" onclick="attack()"> </li>
+                            <li id="attack-2" class="attack" onclick="attack()"> </li>
+                            <li id="attack-3" class="attack" onclick="attack()"> </li>
+                            <li id="attack-4" class="attack" onclick="attack()"> </li>
                         </ul>
+
+                        <p id="attack-msg" class="dnone"> </p>
                     </div>
                     
                     <img alt="Your pokemon" id="my-pkm" class="pkm" />
+                    <p id="my-pkm-name" class="pkm-name"></p>
                     <img alt="Oppenent pokemon" id="opponent-pkm" class="pkm" />
+                    <p id="opponent-pkm-name" class="pkm-name"></p>
 
-                    <button onclick="closeBattle()" id="exit-battle" class="btn"> Exit battle </button>
+                    <button onclick="closeBattle()" id="exit-battle" class="btn"> Fuir le combat </button>
                 </div>
     
                 <div id="0" class="map hidden">
@@ -67,7 +104,16 @@
     
                 <div id="1" class="map hidden">
                     <img class="background" src="./assets/Maps/1.png" alt="Begin">
-                    <button class="item gate" style="top: 40%; left: 30%" onclick="loadMap(0)"> </button>
+                    <button class="item gate" style="top: 50%; left: 25%" onclick="loadMap(0)"> </button>
+                    <button class="item gate" style="top: 40%; right: 10%" onclick="loadMap(10)"> </button>
+                </div>
+                
+                <div id="10" class="map hidden">
+                    <img class="background" src="./assets/Maps/10.png" alt="Begin">
+                    <button class="item gate" style="top: 40%; left: 40%" onclick="loadMap(0)"> </button>
+                    <button class="item npc" style="top: 35%; right: 15%" onclick="openDialog('Bravo, tu m\'as trouvé !')"></button>
+                    <button class="item npc" style="top: 50%; left: 55%" onclick="loadBattle()"></button>
+        
                 </div>
             </div>
         </div>

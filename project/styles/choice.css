@@ -24,7 +24,7 @@
     font-weight: 700;
     font-size: 32px;
     text-shadow: 0 0 white;
-    transition: text-shadow 0.5s linear, color 0.5s linear, filter 1s ease-in-out;
+    transition: text-shadow 0.5s linear, color 0.5s linear, filter 0.25s ease-in-out;
 }
 
 #pkm-choice:hover > button {
@@ -39,9 +39,9 @@
 
 
 #pika-choice {
-    background-image: url("../assets/pokemons/pikaFront.png");
+    background-image: url("../assets/pokemons/pikachuFront.png");
 }
 
 #avistar-choice {
-    background-image: url("../assets/pokemons/starossFront.png");
+    background-image: url("../assets/pokemons/avistarFront.png");
 }

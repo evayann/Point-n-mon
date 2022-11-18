@@ -2,11 +2,15 @@ const gba = document.getElementById("gba");
 const screen = document.getElementById("screen");
 const battle = document.getElementById("battle");
 
+const myPkm = document.getElementById("my-pkm");
+const attackChoice = document.getElementById("attack-choice");
+const attackMsg = document.getElementById("attack-msg");
+
 const hide = "hidden";
 
 let previousScreen = 0;
-// Loading
 
+// Loading
 function loadMap(id) {
     console.log("Load Map :", id);
     for (let map of screen.children) {
@@ -16,16 +20,27 @@ function loadMap(id) {
     }
 }
 
+function unloadMap() {
+    loadMap(-1);
+}
+
 function loadBattle() {
     console.log("Load Battle");
     
     const [myPkm, opponentPkm] = loadPokemon();
+    loadPkmName(false, myPkm.name);
+    loadPkmName(true, opponentPkm.name);
     loadPkmImg(false, myPkm.name);
     loadPkmImg(true, opponentPkm.name);
     loadAttacks(myPkm.attacks);
 
-    loadMap(-1);
+    unloadMap();
     battle.classList.remove(hide);
+}
+
+function loadPkmName(isOpponent, pkmName) {
+    const pkmNameArea = document.getElementById(isOpponent ? "opponent-pkm-name" : "my-pkm-name");
+    pkmNameArea.innerHTML = pkmName; 
 }
 
 function loadPkmImg(isOpponent, pkmName) {
@@ -39,6 +54,19 @@ function loadAttacks(attacks) {
         attackArea.innerHTML = attack;
     }
 }
+
+function attack() {
+    myPkm.classList.add("attack-animation");
+    attackChoice.classList.add("dnone");
+    attackMsg.classList.remove("dnone");
+    attackMsg.innerHTML = `Incroyable ! Tu lui as retiré ${parseInt(Math.random() * 10)} points de vie ! Tu vas pouvoir l'achevé bientôt !`;
+}
+
+myPkm.addEventListener("animationiteration", () => {
+    myPkm.classList.remove("attack-animation");
+    attackChoice.classList.remove("dnone");
+    attackMsg.classList.add("dnone");
+});
 
 function closeBattle() {
     battle.classList.add(hide);

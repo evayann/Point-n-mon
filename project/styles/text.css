@@ -16,7 +16,6 @@
 
 #battle-dialog > #text-dialog,
 #dialog > #text-dialog {
-    width: 90%;
     height: 100%;
 
     font-size: 32px;
