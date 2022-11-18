@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="./styles/background.css">
     <link rel="stylesheet" href="./styles/battle.css">
     <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/choice.css">
     <link rel="stylesheet" href="./styles/utils.css">
     <link rel="stylesheet" href="./styles/items.css">
     <link rel="stylesheet" href="./styles/text.css">
     <link rel="stylesheet" href="./style.css">
     <script src="./core.js" defer></script>
+
+    <script>
+        function loadPokemonChoice() {
+            const pokemonChoiceScreen = document.getElementById("pkm-choice");
+            pokemonChoiceScreen.classList.remove("hidden");
+        }
+    </script>
 </head>
 <body>
     <div id="container">
@@ -21,25 +29,30 @@
 
         <div id="game">
             <img id="gba" src="./assets/GBA.png" alt="The purple Game Boy Advance" />
-            <button class="btn start-btn" onclick="loadMap(0)"> Start </button>
+            <button class="btn start-btn" onclick="loadPokemonChoice()"> Start </button>
             <div id="screen">
                 <div id="dialog" class="hidden">
                     <p id="text-dialog"></p>
                     <button id="close-dialog" class="btn" onclick="closeDialog()"> Fermer </button>
                 </div>
+
+                <div id="pkm-choice" class="hidden">
+                    <button id="pika-choice" onclick="selectPikachu()"> Pikachu </button>
+                    <button id="avistar-choice" onclick="selectAvistar()"> Avistar </button>
+                </div>
     
                 <div id="battle" class="hidden">
                     <div id="battle-dialog">
                         <ul>
-                            <li id="1" class="attack"> Attack 1 </li>
-                            <li id="2" class="attack"> Attack 2 </li>
-                            <li id="3" class="attack"> Attack 3 </li>
-                            <li id="4" class="attack"> Attack 4 </li>
+                            <li id="attack-1" class="attack"> </li>
+                            <li id="attack-2" class="attack"> </li>
+                            <li id="attack-3" class="attack"> </li>
+                            <li id="attack-4" class="attack"> </li>
                         </ul>
                     </div>
                     
-                    <img src="./assets/pokemons/pikaBack.png" alt="Your pokemon" id="my-pkm" class="pkm" />
-                    <img src="./assets/pokemons/starossFront.png" alt="Oppenent pokemon" id="opponent-pkm" class="pkm" />
+                    <img alt="Your pokemon" id="my-pkm" class="pkm" />
+                    <img alt="Oppenent pokemon" id="opponent-pkm" class="pkm" />
 
                     <button onclick="closeBattle()" id="exit-battle" class="btn"> Exit battle </button>
                 </div>
