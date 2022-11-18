@@ -76,3 +76,24 @@
 #battle > #exit-battle {
     margin: 1%;
 }
+
+#battle > .pkm-name {
+    background: #607962;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 0.25em 1em;
+    text-transform: capitalize;
+}
+
+#attack-msg {
+    margin-left: 16px;
+}
+
+.attack-animation {
+    animation: 3s attack-anim infinite; /* Infinte to add eventlistener on animation iteration on js */
+}
+
+@keyframes attack-anim {
+    0%, 100% { transform: translate(0); }
+    50% { transform: translate(200%, -100%); }
+}

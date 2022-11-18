@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cours théorique sur le Web </title>
+
+    <link rel="stylesheet" href="../utilities/theme.css">
+    
+    <style>
+        .scroll-container > section > iframe {
+            flex-basis: 90%;
+            margin: 2%;
+            margin-top: 0;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <button class="home" onclick="window.location.href = '/'"> Accueil </button> 
+
+    <main class="scroll-container">
+        <section class="primary">
+            <h1> Cours théorique peu palpitant </h1>
+            <p> Voici une liste des différentes connaissances vitale mais laborieuse à acquérir pour notre projet. </p>
+            <p> Je compte donc sur toi pour que tu donnes le meilleur de toi même !</p>
+        </section>
+
+        <section class="secondary">
+            <h1> L'HTML </h1>
+            <iframe class="content" title="Introduction" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/introduction"></iframe>
+        </section>
+        
+        <section class="tertiary">
+            <h1> Balise sans attributs </h1>
+            <iframe class="content" title="Balise sans attributs" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/balises-sans-attribut"></iframe>
+        </section>
+
+        <section class="secondary">
+            <h1> Balise avec attributs </h1>
+            <iframe class="content" title="Balise avec attributs" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/balises-avec-attributs"></iframe>
+        </section>
+
+        <section class="tertiary">
+            <h1> La sémantique </h1>
+            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/la-semantique"></iframe>
+        </section>
+
+        <section class="primary">
+            <h1> Le CSS </h1>
+            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/36092/exercices-css/introduction"></iframe>
+        </section>
+
+        <section class="secondary">
+            <h1> Bases du CSS </h1>
+            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/36092/exercices-css/base-css"></iframe>
+        </section>
+
+        <section class="tertiary">
+            <h1> Petit jeu de CSS </h1>
+            <iframe class="content" title="La sémantique" loading="lazy" src="https://flukeout.github.io/#"></iframe>
+        </section>
+
+        <section class="primary">
+            <h1> Pour aller plus loin, un peu de javascript </h1>
+            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/83722/exercice-javascript"></iframe>
+        </section>
+    </main>
+</body>
+</html>

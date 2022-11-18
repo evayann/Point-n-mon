@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cours théorique sur le Web </title>
+
+    <link rel="stylesheet" href="../utilities/theme.css">
+    
+    <style>
+        .title-name {
+            font: 700;
+            font-size: 24px;
+            color: #ef7094;
+        }
+
+        .scroll-container > section > .content {
+            flex-basis: 90%;
+            margin: 2%;
+            margin-top: 0;
+            border-radius: 1rem;
+        }
+
+        main {
+            counter-reset: h1-id;
+        }
+
+        section:not(#presentation) > h1 {
+            counter-increment: h1-id;
+        }
+
+        section:not(#presentation) > h1::before {
+            content: counter(h1-id) ". ";
+        }
+
+        h1 {
+            margin-bottom: 64px;
+        }
+
+        em {
+            font-weight: 500;
+            color: #ef7094;
+        }
+    </style>
+</head>
+<body>
+    <button class="home" onclick="window.location.href = '/'"> Accueil </button> 
+
+    <main class="scroll-container">
+        <section id="presentation" class="secondary">
+            <h1> Le projet </h1>
+            <p> Tu t'es donnée du mal pour arriver à cette partie, maintenant, amusons nous sur un vrai projet ! </p>
+            <hr/>
+            <p> Je te propose de continué le célèbre jeu, <span class="title-name">Point'n'mon</span>. </p>
+
+            <p> Tu trouveras ci-dessous la liste des éléments à implémenter dans le jeu. Tu peux les faires dans le désordre et n'oubliez pas de valider ton avancer avec les check box en haut à droite ! </p>
+        </section>
+
+        <section class="tertiary">
+            <h1> Vérifier le bon fonctionnement du projet </h1>
+            <p> Pour cela, je te laisse ouvrir le projet présent dans le dossier <span class="title-name">Point'n'mon</span> dans ton éditeur de texte favori, <em>VSCode</em>. </p>
+            <hr/>
+            <p> Une fois cela effectué, tu vas pouvoir ouvrir le fichier <em>index.html</em> dans le navigateur et écrire tes premières lignes de code dans ce dernier !</p>
+        </section>
+
+        <section class="primary">
+            <h1> Vérifier le bon fonctionnement du projet </h1>
+            <p> Pour cela, je te laisse ouvrir le projet présent dans le dossier <span class="title-name">Point'n'mon</span> dans ton éditeur de texte favori, <em>VSCode</em>. </p>
+            <hr/>
+            <p> Une fois cela effectué, tu vas pouvoir ouvrir le fichier <em>index.html</em> dans le navigateur et écrire tes premières lignes de code dans ce dernier !</p>
+        </section>
+    </main>
+</body>
+</html>
