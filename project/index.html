@@ -34,10 +34,9 @@
     </style>
 
     <script>
-        /* Fonctionnalité : 1 */
-
         let gbaStart = false;
 
+        /* Fonctionnalité : 1 */
         function loadPokemonChoice() {
             if (! gbaStart) {
                 const pokemonChoiceScreen = document.getElementById("pkm-choice");
@@ -46,6 +45,7 @@
             }
         }
 
+        /* Fonctionnalité : 6 */
         function shutdown() {
             unloadMap();
             const battle = document.getElementById("battle");
