@@ -15,62 +15,135 @@
             margin-top: 0;
             border-radius: 1rem;
         }
+
+        .scroll-container > section a {
+            color: var(--em-color);
+            text-decoration: none;
+            transition: text-shadow 0.5s;
+        }
+
+        .scroll-container > section a:hover {
+            text-shadow: 
+                1px 0 0 var(--em-color);
+        }
     </style>
 </head>
 <body>
-    <button class="home" onclick="window.location.href = '../index.html'"> Accueil </button> 
+    <a target="_blank" rel="noopener noreferrer" class="home" href="../index.html"> Accueil </a> 
 
     <main class="scroll-container">
-        <section class="primary">
-            <h1> Cours théorique peu palpitant </h1>
+        <section>
+            <h1> Cours théorique palpitant </h1>
             <p> Voici une liste des différentes connaissances vitale mais laborieuse à acquérir pour notre projet. </p>
             <p> Je compte donc sur toi pour que tu donnes le meilleur de toi même !</p>
+            <hr/>
         </section>
 
-        <section class="secondary">
+        <section>
             <h1> L'HTML </h1>
-            <iframe class="content" title="Introduction" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/introduction"></iframe>
+            <p> Pour commencer, il est important de découvrir le  language de définition de la structure d'une page web, l'HTML. </p>
+            <p> Voici donc ton premier tuto à suivre : <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/introduction">https://tech.io/playgrounds/35475/exercices-html/introduction</a></p>
+        
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Comment se compose une page web </li>
+                    <li> Ou écrire les informations utiles au moteur de recherche (les méta-informations) </li>
+                    <li> Ou écrice le contenu de la page </li>
+                </ul>
+            </details>
+
+            <hr/>
         </section>
         
-        <section class="tertiary">
-            <h1> Balise sans attributs </h1>
-            <iframe class="content" title="Balise sans attributs" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/balises-sans-attribut"></iframe>
+        <section>
+            <h1> Les balises </h1>
+            <p> A présent, découvrant les différentes balises qui constitue une page web. Elles se décompose en 2 types : </p>
+            <ul>
+                <li> <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/balises-sans-attribut"> Les balises sans attributs </a> </li>
+                <li> <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/balises-avec-attributs"> Les balises avec attributs </a> </li>
+            </ul>
+
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Comment ce construit une balise </li>
+                    <li> Qu'est qu'un attribut </li>
+                    <li> L'ensemble des exercicces </li>
+                </ul>
+            </details>
+            
+            <hr/>
         </section>
 
-        <section class="secondary">
-            <h1> Balise avec attributs </h1>
-            <iframe class="content" title="Balise avec attributs" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/balises-avec-attributs"></iframe>
-        </section>
-
-        <section class="tertiary">
+        <section>
             <h1> La sémantique </h1>
-            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/35475/exercices-html/la-semantique"></iframe>
+            <p> Un des éléments important dans la construction d'une page en html est la sémantique. </p>
+            <p> Il s'agit de l'art d'organiser les différents bloc pour que le naviguateur puisse les interpréter au mieux. Cela aide aussi Google et les autres moteurs de rechercher à comprendre ce qui se situe dans le site web. </p>
+            <p> Voici un lien pour en apprendre plus au sujet de la sémantique d'une page : <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/la-semantique">https://tech.io/playgrounds/35475/exercices-html/la-semantique</a></p>
+            
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Comment ce construit une balise </li>
+                    <li> Qu'est qu'un attribut </li>
+                    <li> L'ensemble des exercices </li>
+                </ul>
+                <p style="margin: 0; padding: 0;"> Et non pas de savoir faire l'exercice parfaitement. </p>
+            </details>
+
+            <hr/>
         </section>
 
-        <section class="primary">
+        <section>
             <h1> Le CSS </h1>
-            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/36092/exercices-css/introduction"></iframe>
+            <p> A présent que tu maitrise l'ajout de contenu dans la page, il faut apprendre à le mettre en page, c'est à dire lui donnée un <em>style</em> incroyable !</p>
+            <p> Pour cela, découvre les bases du CSS ! <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/36092/exercices-css/introduction">https://tech.io/playgrounds/36092/exercices-css/introduction</a> </p>
+
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Comment appliquer du style sur de l'html </li>
+                </ul>
+            </details>
+
+            <hr/>
         </section>
 
-        <section class="secondary">
-            <h1> Bases du CSS </h1>
-            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/36092/exercices-css/base-css"></iframe>
+        <section>
+            <h1> Les bases du CSS </h1>
+            <p> Les différents types de styles : <a target="_blank" rel="noopener noreferrer" href="https://www.hostinger.fr/tutoriels/style-css">https://www.hostinger.fr/tutoriels/style-css</a> </p>
+            <p> Le style <em>position: absolute</em>. Pour cela, voici une documentation <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/CSS/position">https://developer.mozilla.org/fr/docs/Web/CSS/position</a> </p>
+            <p> Et <a target="_blank" rel="noopener noreferrer" href="https://flukeout.github.io/#">un petit jeu</a> pour vous exercer sur les selecteurs CSS.</p>
+            <p> Ainsi que les exos <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/36092/exercices-css/base-css">https://tech.io/playgrounds/36092/exercices-css/base-css</a> propose différents exercices pour apprendre à styliser de l'html. Le but ici est que vous manipulier le concept et non pas que vous réussisiez parfaitement tous les exercices. </p>
+
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de s'exercer ! <em>Vous ne devez pas finir tous les exercices.</em> </summary>
+            
+                <ul>
+                    <li>Les types de styles</li>
+                    <li>La propriété <em>position: aboslute</em></li>
+                </ul>
+            </details>
+
+            <hr />
         </section>
 
-        <section class="primary">
-            <h1> La propriété <em>position</em> </h1>
-            <p> Elle sera bien importante pour le projet, surtout en absolute </p>
-            <iframe class="content" style="flex-basis: 80%;" title="La sémantique" loading="lazy" src="https://www.zonecss.fr/proprietes-css/position-css.html"></iframe>
-        </section>
+        <section>
+            <h1> Le Javascript </h1>
+            <p> Pour terminer, voici un lien pour appréhender le Javascript. <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/83722/exercice-javascript">https://tech.io/playgrounds/83722/exercice-javascript</a>. </p>
+            <p> Ainsi qu'une méthode qui sera utilisé, <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById"><em>getElementById</em></a> </p>
+        
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Qu'est ce qu'une fonction / méthode </li>
+                    <li> L'arithmétique </li>
+                    <li> getElementById </li>
+                </ul>
+            </details>
 
-        <section class="tertiary">
-            <h1> Petit jeu de CSS </h1>
-            <iframe class="content" title="La sémantique" loading="lazy" src="https://flukeout.github.io/#"></iframe>
-        </section>
-
-        <section class="primary">
-            <h1> Pour aller plus loin, un peu de javascript </h1>
-            <iframe class="content" title="La sémantique" loading="lazy" src="https://tech.io/playgrounds/83722/exercice-javascript"></iframe>
+            <hr/>
         </section>
     </main>
 </body>

@@ -33,7 +33,8 @@
 .keypoints > .card > img {
     flex-basis: 100%;
 
-    width: 90%;
+    margin: 5% 10%;
+    width: 20vw;
     aspect-ratio: 1;
 }
 
@@ -50,13 +51,12 @@
 #summary li::before {
     content: counter(list-id) ". ";
     font-size: 30px;
-    color: #bd400f;
+    color: var(--em-color);
 }
 
 em {
     font-size: 32px;
     font-weight: 700;
-    color: #ef703e;
 }
 
 footer {

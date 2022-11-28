@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --text: #202633;
+    --em-color: #1606aa;
+    --primary: #a0cea7;
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -9,6 +15,8 @@ body {
     flex-direction: column;
 
     margin: 0;
+
+    background-color: #e8e8e8;
 }
 
 body :is(p, h1, h2, h3, h4, h5, h6, hr) {
@@ -16,23 +24,27 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
     margin-right: 16px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--em-color) !important;
+}
+
 /* Theme */
 
 .primary {
-    background: linear-gradient(90deg, #faf0cd, #fab397);
+    background: var(--primary);
 }
 
 .secondary {
-    background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+    background: var(--secondary);
     color: #52494c;
 }
 
 .tertiary {
-    background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+    background: var(--tertiary);
 }
 
 :is(.primary, .secondary, .tertiary)>* {
-    color: #202633;
+    color: var(--text);
     font-weight: bold;
 }
 
@@ -58,20 +70,29 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
     flex-direction: column;
     justify-content: center;
 
-    width: 100%;
+    --px: 25vw;
+
+    width: calc(100% - 2 * var(--px));
     height: 100%;
     scroll-snap-align: center;
+
+    padding: 0 var(--px);
+}
+
+em {
+    font-weight: 600;
+    color: var(--em-color);
 }
 
 /* Navbar */
 #navbar {
     position: sticky;
     top: 0;
-    background-color: rgb(120, 186, 130);
+    background-color: var(--primary);
     box-shadow:
-        0 1px 1px rgba(87, 168, 99, 0.5),
-        0 3px 3px rgba(87, 168, 99, 0.25),
-        0 5px 5px rgba(87, 168, 99, 0.125);
+        0 1px 3px black,
+        0 3px 4px black,
+        0 5px 5px black;
 }
 
 #navbar> ul {
@@ -101,6 +122,10 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
 #navbar a {
     font-size: 2rem;
     text-decoration: none;
+
+    color: var(--em-color);
+
+    transition: all 0.5s linear;
 }
 
 #navbar a::before {
@@ -110,7 +135,7 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
     left: 0;
     width: 0;
     height: 5px;
-    background-color: #202633;
+    background-color: black;
     transition: width 0.5s ease-in-out;
 }
 
@@ -119,7 +144,7 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
 }
 
 #navbar a:hover {
-    text-shadow: 0 0 10px #202633;
+    color: black;
 }
 
 /* Back home style button */
@@ -131,8 +156,10 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
     padding: 1em;
     margin: 1em;
     font-weight: 700;
-    background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+    background: var(--primary);
     cursor: pointer;
+
+    transition: filter 0.5s ease-in-out;
 
     position: absolute;
     right: 10px;
@@ -143,7 +170,27 @@ body :is(p, h1, h2, h3, h4, h5, h6, hr) {
 }
 
 hr {
-    width: 80%;
-    background-color: #202633;
-    border: 1px solid #202633;
+    --size: 20%;
+    width: calc(100% + var(--size, 0) * 2);
+    margin-top: 10%;
+    margin-left: calc(-1 * var(--size)) !important;
+    margin-bottom: 0;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+details {
+    padding: 3rem;
+}
+
+details > summary {
+    list-style-type: none;
+}
+
+details[disabled] summary {
+    pointer-events: none; 
+}
+
+details > :not(summary) {
+    padding-left: 2.5rem;
 }

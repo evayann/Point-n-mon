@@ -12,7 +12,6 @@
         .title-name {
             font: 700;
             font-size: 24px;
-            color: #ef7094;
         }
 
         .scroll-container > section > .content {
@@ -20,6 +19,10 @@
             margin: 2%;
             margin-top: 0;
             border-radius: 1rem;
+        }
+
+        .title-name {
+            color: var(--em-color) !important;
         }
 
         main {
@@ -33,7 +36,8 @@
         section:not(.presentation) > h1::before {
             content: "Fonctionnalité " counter(h1-id) ". ";
             font-weight: 800;
-            background: repeating-linear-gradient(to right, #ef7094, #bc70ef 10%, #ef7094 20%);
+            background: repeating-linear-gradient(to right, var(--em-color), var(--em-color) 86%, #7733c0 87%, #7733c0 100%);
+            filter: brightness(110%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -41,70 +45,78 @@
         h1 {
             margin-bottom: 64px;
         }
-
-        em {
-            font-weight: 500;
-            color: #ef7094;
-        }
     </style>
 </head>
 <body>
-    <button class="home" onclick="window.location.href = '../index.html'"> Accueil </button> 
+    <a class="home" href="../index.html"> Accueil </a> 
 
     <main class="scroll-container">
-        <section class="presentation secondary">
+        <section class="presentation">
             <h1> Le projet </h1>
             <p> Tu t'es donnée du mal pour arriver à cette partie, maintenant, amusons nous sur un vrai projet ! </p>
             <p> Je te propose de continué le célèbre jeu, <span class="title-name">Point'n'mon</span>. </p>
             <p> Tu trouveras ci-dessous la liste des éléments à implémenter dans le jeu. Tu peux les faires dans le désordre et n'oubliez pas de valider ton avancer avec les check box en haut à droite ! </p>
+            <hr/>
         </section>
 
-        <section class="presentation tertiary">
+        <section class="presentation">
             <h1> Vérifier le bon fonctionnement du projet </h1>
             <p> Pour cela, je te laisse ouvrir le projet présent dans le dossier <span class="title-name">Point'n'mon</span> dans ton éditeur de texte favori, <em>VSCode</em>. </p>
             <p> Une fois cela effectué, tu vas pouvoir ouvrir le fichier <em>index.html</em> dans le navigateur et écrire tes premières lignes de code dans ce dernier !</p>
+
+            <img src="../assets/arbo.png" alt="L'arborescence du projet" width="200px" style="align-self: center;"/>
+
+            <hr/>
         </section>
 
-        <section class="presentation primary">
+        <section class="presentation">
             <h1> Comprendre le système du projet </h1>
             <p> Pour implémenter de nouvelles fonctionnalités, il est important que tu comprenne ce que l'on va faire. Voici donc une courte descriptions des fonctionnalités de Point'n'Mon. </p>
             <ul>
-                <li> Changer de cartes à l'aide de téléporteur </li>
+                <li> Démarrer la console </li>
+                <li> Choisir un pokémon de départ </li>
                 <li> Dialoguer avec des personnages </li>
                 <li> Lancer des combats de pokémons </li>
-                <li> Choisir un pokémon de départ </li>
-                <li> Démarrer / Arréter la console </li>
+                <li> Changer de cartes à l'aide de téléporteur </li>
+                <li> Arréter la console </li>
             </ul>
-            <p> Chaque fonctionnalité est à implémenter dans le fichier index.html. Pour faciliter l'écriture du code, des commentaires son présent pour t'indiquer ou écrire ce dernier. </p>
+            <p> Chaque fonctionnalité est à implémenter dans le fichier <em>index.html</em> en dessous du commentaire indiquant son emplacement. Pour faciliter l'écriture du code, des commentaires son présent pour t'indiquer ou écrire ce dernier. </p>
             <p> C'est donc le moment de commencer cette <em>folle aventure</em> ! Bon code ! </p>
+            <hr/>
         </section>
 
-        <section class="secondary">
-            <h1> Ajouter un bouton de démarrage </h1>
+        <section>
+            <h1> Ajouter le bouton de démarrage </h1>
             <p> Actuellement, notre console ne démarre pas. Je pense qu'il manque une petite connexion entre le bouton et l'affichage du menu de choix de pokémon. </p>
-            <p> Pour afficher l'ecran de choix du pokémon, tu vas devoir supprimer la classe de style <em>hidden</em> de la balise avec l'id <em>pkm-choice</em>. </p>
+            <p> Pour afficher l'ecran de choix du pokémon, tu vas devoir créer une fonction javascript <em>loadPokemonChoice</em>. Cette dernière devra supprimer la classe de style <em>hidden</em> de la balise avec l'id <em>pkm-choice</em>. </p>
+            
+            <hr/>
         </section>
 
-        <section class="tertiary">
+        <section>
             <h1> Placer Sacha devant chez lui et le faire parler </h1>
-            <p> Dans la <em>map 1</em> il va falloir placer le joueur (player) qui est un élément (item) en position absolue. </p>
+            <p> Dans la <em>map 1</em>, il va falloir placer le sacha qui est un bouton pour pouvoir interagir avec ce derniers. Ce dernier est considérer comme le joueur (player) et est un élément (item) placé position absolue. </p>
             <p> Cela se résume donc à placer un bouton avec les classes <em>item</em> et <em>player</em> ainsi que d'appliser du style pour placer le bouton. </p>
             <p> Une fois Sacha placé, tu peux le faire parler en appelant la fonction <em>openDialog</em> en passant en paramètre la chaine de caractère à lui faire dire. </p>
+            
+            <hr/>
         </section>
 
-        <section class="primary">
+        <section>
             <h1> Placer un adversaire pour combattre ! </h1>
             <p> Comme pour Sacha, ajoutons un bouton représantant notre adversaire. Ce dernier devra comporter les classes item et npc ainsi que le style pour placer ce personnage. </p>
             <p> Une fois cela fait, il te suffit d'appeler la fonction <em>loadBattle</em> pour pouvoir se battre contre lui ! </p>
+            <hr/>
         </section>
 
-        <section class="secondary">
+        <section>
             <h1> Réparer l'interface de combat </h1>
             <p> Comme tu as pu le voir si tu as lancé un combat, il y a un petit problème sur le placement des noms des pokémons. </p>
             <p> On va devoir réparer tout ca avec un peu de style. En regardant dans l'html, tu pourras chercher les selecteurs qui te seront utiles puis les placer comme tu as l'habitude. </p>
+            <hr/>
         </section>
 
-        <section class="tertiary">
+        <section>
             <h1> Ajouter une nouvelle carte </h1>
             <p> Maintenant que tu sais quasiment tout faire, tu peux ajouter t'as propre carte ! </p>
             <p> Pour cela, je souhaiterais que tu utilise :  </p>
@@ -115,11 +127,13 @@
                 <li> Un joueur pour lui parler disant que tu l'as trouvé </li>
                 <li> Un téléporteur pour retourné sur la carte 1 </li>
             </ul>
+            <hr/>
         </section>
 
-        <section class="primary">
+        <section>
             <h1> Il est temps d'éteindre la console </h1>
             <p> Peut tu finir en cachant l'ensemble du contenu de l'écran quand l'on clique sur le bonton 'Stop' ? </p>
+            <hr/>
         </section>
     </main>
 </body>

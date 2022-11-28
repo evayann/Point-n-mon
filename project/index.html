@@ -34,25 +34,15 @@
     </style>
 
     <script>
-        let gbaStart = false;
-
         /* Fonctionnalité : 1 */
         function loadPokemonChoice() {
-            if (! gbaStart) {
-                const pokemonChoiceScreen = document.getElementById("pkm-choice");
-                pokemonChoiceScreen.classList.remove("hidden");
-                gbaStart = true;
-            }
+            const pokemonChoiceScreen = document.getElementById("pkm-choice");
+            pokemonChoiceScreen.classList.remove("hidden");
         }
 
         /* Fonctionnalité : 6 */
         function shutdown() {
             unloadMap();
-            const battle = document.getElementById("battle");
-            battle.classList.add("hidden");
-            const choice = document.getElementById("pkm-choice");
-            choice.classList.add("hidden");
-            gbaStart = false;
         }
     </script>
 </head>
@@ -83,7 +73,7 @@
                             <li id="attack-1" class="attack" onclick="attack()"> </li>
                             <li id="attack-2" class="attack" onclick="attack()"> </li>
                             <li id="attack-3" class="attack" onclick="attack()"> </li>
-                            <li id="attack-4" class="attack" onclick="attack()"> </li>
+                            <li id  ="attack-4" class="attack" onclick="attack()"> </li>
                         </ul>
 
                         <p id="attack-msg" class="dnone"> </p>
