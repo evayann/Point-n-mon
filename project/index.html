@@ -21,12 +21,9 @@
     </style>
 
     <script>
-        let gbaStart = false;
-
         /* Fonctionnalité : 1 */
 
         /* Fonctionnalité : 6 */
-
     </script>
 </head>
 <body>
@@ -56,7 +53,7 @@
                             <li id="attack-1" class="attack" onclick="attack()"> </li>
                             <li id="attack-2" class="attack" onclick="attack()"> </li>
                             <li id="attack-3" class="attack" onclick="attack()"> </li>
-                            <li id="attack-4" class="attack" onclick="attack()"> </li>
+                            <li id  ="attack-4" class="attack" onclick="attack()"> </li>
                         </ul>
 
                         <p id="attack-msg" class="dnone"> </p>
@@ -81,10 +78,15 @@
                 <div id="1" class="map hidden">
                     <img class="background" src="./assets/Maps/1.png" alt="Begin">
                     <button class="item gate" style="top: 50%; left: 25%" onclick="loadMap(0)"> </button>
-                    <!-- Fonctionnalité : 5.b -->
+                    <!-- Fonctionnalité : 5 -->
                 </div>
                 
-                <!-- Fonctionnalité : 5.a -->
+                <div id="10" class="map hidden">
+                    <img class="background" src="./assets/Maps/10.png" alt="Begin">
+                    <!-- Fonctionnalité : 5 -->
+                    <button class="item npc" style="top: 35%; right: 15%" onclick="openDialog('Bravo, tu m\'as trouvé !')"></button>
+                    <button class="item npc" style="top: 50%; left: 55%" onclick="loadBattle()"></button>
+                </div>
             </div>
         </div>
     </div>
