@@ -82,6 +82,7 @@
             </ul>
             <p> Chaque fonctionnalité est à implémenter dans le fichier <em>index.html</em> en dessous du commentaire indiquant son emplacement. Pour faciliter l'écriture du code, des commentaires son présent pour t'indiquer ou écrire ce dernier. </p>
             <p> C'est donc le moment de commencer cette <em>folle aventure</em> ! Bon code ! </p>
+
             <hr/>
         </section>
 
@@ -95,45 +96,56 @@
 
         <section>
             <h1> Placer Sacha devant chez lui et le faire parler </h1>
-            <p> Dans la <em>map 1</em>, il va falloir placer le sacha qui est un bouton pour pouvoir interagir avec ce derniers. Ce dernier est considérer comme le joueur (player) et est un élément (item) placé position absolue. </p>
-            <p> Cela se résume donc à placer un bouton avec les classes <em>item</em> et <em>player</em> ainsi que d'appliser du style pour placer le bouton. </p>
-            <p> Une fois Sacha placé, tu peux le faire parler en appelant la fonction <em>openDialog</em> en passant en paramètre la chaine de caractère à lui faire dire. </p>
+            <p> Dans la <em>map 1</em>, il va falloir placer le sacha qui est un bouton pour pouvoir interagir avec ce dernier. Ce dernier est considérer comme le joueur (player) et est un élément (item) placé position absolue. Pour maitriser le placement, il faudra utiliser les attributs : <em>position: absolute; top; left;</em></p>
+            <p> Cela se résume donc à placer un bouton avec les classes <em>item</em> et <em>player</em> ainsi que d'appliqer du style <em>inline</em> pour placer le bouton. </p>
+            <p> Une fois Sacha placé, tu peux le faire parler en appelant la fonction <em>openDialog</em> dans l'attribut <em>onclick</em> de la balise de Sacha. Le paramètre de la fonction est la chaine de caractère à lui faire dire. </p>
             
             <hr/>
         </section>
 
         <section>
             <h1> Placer un adversaire pour combattre ! </h1>
-            <p> Comme pour Sacha, ajoutons un bouton représantant notre adversaire. Ce dernier devra comporter les classes item et npc ainsi que le style pour placer ce personnage. </p>
+            <p> Comme pour Sacha, ajoutons un bouton représantant notre adversaire. Ce dernier devra comporter les classes <em>item</em> et <em>npc</em> ainsi que le style <em>inline</em> pour placer ce personnage (les attributs <em>position: absolute; top; left;</em>). </p>
             <p> Une fois cela fait, il te suffit d'appeler la fonction <em>loadBattle</em> pour pouvoir se battre contre lui ! </p>
             <hr/>
         </section>
 
         <section>
             <h1> Réparer l'interface de combat </h1>
-            <p> Comme tu as pu le voir si tu as lancé un combat, il y a un petit problème sur le placement des noms des pokémons. </p>
-            <p> On va devoir réparer tout ca avec un peu de style. En regardant dans l'html, tu pourras chercher les selecteurs qui te seront utiles puis les placer comme tu as l'habitude. </p>
+            <p> Comme tu as pu le voir si tu as lancé un combat en cliquant sur ton adversaire, il y a un petit problème sur le placement des noms des pokémons. </p>
+            <p> On va devoir réparer tout ca avec un peu de style. En regardant dans l'html, tu pourras chercher les selecteurs dans une balise <em>div</em> ayant pour id <em>battle</em>. Tu devras trouver : </p>
+            <ul>
+                <li> La classe pkm-name</li>
+                <li> L'id my-pkm-name</li>
+                <li> L'id opponent-pkm-name</li>
+            </ul>
+            <p> Une fois ces identifiants trouvés, tu pourras les placer dans le bloc style avec les attributs <em>position: absolute; top; left;</em></p>
             <hr/>
         </section>
 
         <section>
-            <h1> Ajouter une nouvelle carte </h1>
-            <p> Maintenant que tu sais quasiment tout faire, tu peux ajouter t'as propre carte ! </p>
-            <p> Pour cela, je souhaiterais que tu utilise :  </p>
+            <h1> Changer de carte </h1>
+            <p> Maintenant que tu sais quasiment tout faire, tu vas pouvoir te déplacer de carte en carte ! </p>
+            <p> Pour cela, tu peux cliquer sur les téléporteur (croix noir). </p>
+            <p> Ce que tu vas faire ici, c'est ajouté une connection de la carte 1 vers la carte 10, puis de la 10 vers la carte 0. Pour ce faire : </p>
             <ul>
-                <li> La carte numéro 10 </li>
-                <li> Un téléporteur pour se déplacer sur cette dernière sur la carte 2 (5.b) </li>
-                <li> Un adversaire pour se battre </li>
-                <li> Un joueur pour lui parler disant que tu l'as trouvé </li>
-                <li> Un téléporteur pour retourné sur la carte 1 </li>
+                <li> Dans la div ayant pour id <em>1</em>, ajoute un bouton avec les classes <em>item et gate</em> ensuite, il te suffit de placer les éléments avec du style <em>inline</em> comme à l'acoutumé. Pour finir, ajoute l'attribut <em>onclick</em> avec la fonction <em>loadMap(0)</em> </li>
+                <li> Dans la div ayant pour id <em>10</em>, ajoute un bouton avec les classes <em>item et gate</em> ensuite, il te suffit de placer les éléments avec du style <em>inline</em> comme à l'acoutumé. Pour finir, ajoute l'attribut <em>onclick</em> avec la fonction <em>loadMap(10)</em> </li>
             </ul>
+
             <hr/>
         </section>
 
         <section>
             <h1> Il est temps d'éteindre la console </h1>
-            <p> Peut tu finir en cachant l'ensemble du contenu de l'écran quand l'on clique sur le bonton 'Stop' ? </p>
+            <p> Peut tu finir en cachant l'ensemble du contenu de l'écran quand l'on clique sur le bonton <em>'Stop'</em> ? Pour cela, il va falloir que la fonction appeller à l'appuie du bouton appel une fonction déjà implémenté, <em>unloadMap</em>.</p>
+            
             <hr/>
+        </section>
+
+        <section class="presentation">
+            <h1> S'il te reste du temps. </h1>
+            <p> Tu peux t'amuser à implémenter une nouvelle carte avec d'autres personnages pour encore plus de fun ! </p>
         </section>
     </main>
 </body>
