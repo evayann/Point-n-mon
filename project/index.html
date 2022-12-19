@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,19 +14,16 @@
     <link rel="stylesheet" href="./styles/utils.css">
     <link rel="stylesheet" href="./styles/items.css">
     <link rel="stylesheet" href="./styles/text.css">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./core.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/core.js" defer></script>
 
-    <style>
-        /* Fonctionnalité : 4 */
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
 
     <script>
-        /* Fonctionnalité : 1 */
-
-        /* Fonctionnalité : 6 */
     </script>
 </head>
+
 <body>
     <div id="container">
         <h1 id="game-title"> Point'n'Mon </h1>
@@ -46,47 +44,56 @@
                     <button id="pika-choice" onclick="selectPikachu()"> Pikachu </button>
                     <button id="avistar-choice" onclick="selectAvistar()"> Avistar </button>
                 </div>
-    
+
                 <div id="battle" class="hidden">
                     <div id="battle-dialog">
                         <ul id="attack-choice">
                             <li id="attack-1" class="attack" onclick="attack()"> </li>
                             <li id="attack-2" class="attack" onclick="attack()"> </li>
                             <li id="attack-3" class="attack" onclick="attack()"> </li>
-                            <li id  ="attack-4" class="attack" onclick="attack()"> </li>
+                            <li id="attack-4" class="attack" onclick="attack()"> </li>
                         </ul>
 
                         <p id="attack-msg" class="dnone"> </p>
                     </div>
-                    
+
                     <img alt="Your pokemon" id="my-pkm" class="pkm" />
                     <p id="my-pkm-name" class="pkm-name"></p>
                     <img alt="Oppenent pokemon" id="opponent-pkm" class="pkm" />
                     <p id="opponent-pkm-name" class="pkm-name"></p>
+
+                    <button onclick="closeBattle()" id="exit-battle" class="btn"> Fuir le combat </button>
                 </div>
-    
+
                 <div id="0" class="map hidden">
                     <img class="background" src="./assets/Maps/0.png" alt="Begin">
-                    <img class="item easter-egg" src="./assets/EasterEgg.png" alt="An easter egg" style="top: 0%; right: 0%;" role="button" onclick="openDialog('Felicitation, tu as découvert un secret de Point\'n\'mon !')"/>
+                    <img class="item easter-egg" src="./assets/EasterEgg.png" alt="An easter egg"
+                        style="top: 0%; right: 0%;" role="button"
+                        onclick="openDialog('Felicitation, tu as découvert un secret de Point\'n\'mon !')" />
                     <button class="item gate" style="top: 45%; left: 24%" onclick="loadMap(1)"> </button>
                     <!-- Fonctionnalité : 2 -->
+                    <button class="item player" style="bottom: 10%; left: 35%"
+                        onclick="openDialog('Je suis Sacha du Bourg Palette !')"></button>
                     <!-- Fonctionnalité : 3 -->
                 </div>
-    
+
                 <div id="1" class="map hidden">
                     <img class="background" src="./assets/Maps/1.png" alt="Begin">
                     <button class="item gate" style="top: 50%; left: 25%" onclick="loadMap(0)"> </button>
                     <!-- Fonctionnalité : 5 -->
                 </div>
-                
+
                 <div id="10" class="map hidden">
                     <img class="background" src="./assets/Maps/10.png" alt="Begin">
+                    <button class="item gate" style="top: 40%; left: 40%" onclick="loadMap(0)"> </button>
                     <!-- Fonctionnalité : 5 -->
-                    <button class="item npc" style="top: 35%; right: 15%" onclick="openDialog('Bravo, tu m\'as trouvé !')"></button>
+                    <button class="item npc" style="top: 35%; right: 15%"
+                        onclick="openDialog('Bravo, tu m\'as trouvé !')"></button>
                     <button class="item npc" style="top: 50%; left: 55%" onclick="loadBattle()"></button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
