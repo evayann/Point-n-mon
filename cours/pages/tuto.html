@@ -29,19 +29,52 @@
     </style>
 </head>
 <body>
-    <a target="_blank" rel="noopener noreferrer" class="home" href="../index.html"> Accueil </a> 
+    <a class="home" href="../index.html"> Accueil </a> 
+
+    <input type="checkbox" id="side-menu" class="menu-open" role="button">
+    <label for="side-menu" class="side-menu-btn"> 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <ul class="menu">
+        <li><a href="#html">HTML</a></li>
+        <li class="tab"><a href="#base-html">Les bases de l'HTML</a></li>
+        <li class="tab"><a href="#balises-html">Les balises HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li class="tab"><a href="#base-css">Les bases du CSS</a></li>
+        <li class="tab"><a href="#position-absolute">Postion: absolute;</a></li>
+        <li><a href="#javascript">Javascript</a></li>
+        <li><a href="#bonus">Bonus</a></li>
+        <li class="tab"><a href="#semantique">La sémantique</a></li>
+        <li class="tab"><a href="#type-de-css">Les types de CSS</a></li>
+        <li class="tab"><a href="#jeu-css">Jeu CSS</a></li>
+    </ul>
 
     <main class="scroll-container">
         <section>
             <h1> Cours théorique palpitant </h1>
             <p> Voici une liste des différentes connaissances vitale mais laborieuse à acquérir pour notre projet. </p>
+            <p> À la fin de chaque module, tu as un petit récapitulatif de ce qui est important à se souvenir. </p>
             <p> Je compte donc sur toi pour que tu donnes le meilleur de toi même !</p>
             <hr/>
         </section>
 
-        <section>
-            <h1> L'HTML </h1>
-            <p> Pour commencer, il est important de découvrir le  language de définition de la structure d'une page web, l'HTML. </p>
+        <section id="html">
+            <h2> L'HTML </h2>
+            <p> Dans la partie suivante, nous allons découvrir les points suivants au sujet de l'HTML : </p>
+            <ul>
+                <li><a href="#base-html">Qu'est ce que l'HTML</a></li>
+                <li><a href="#balises-html">Les balises HTML sans et avec attributs</a></li>
+            </ul>
+        </section>
+
+        <section id="base-html">
+            <h3> Les bases de l'HTML </h3>
+            <p> Pour commencer, il est important de découvrir le language de définition de la structure d'une page web, l'HTML. </p>
             <p> Voici donc ton premier tuto à suivre : <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/introduction">https://tech.io/playgrounds/35475/exercices-html/introduction</a></p>
         
             <details open disabled>
@@ -52,12 +85,10 @@
                     <li> Ou écrice le contenu de la page </li>
                 </ul>
             </details>
-
-            <hr/>
         </section>
         
-        <section>
-            <h1> Les balises </h1>
+        <section id="balises-html">
+            <h3> Les balises </h3>
             <p> A présent, découvrant les différentes balises qui constitue une page web. Elles se décompose en 2 types : </p>
             <ul>
                 <li> <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/balises-sans-attribut"> Les balises sans attributs </a> </li>
@@ -76,8 +107,80 @@
             <hr/>
         </section>
 
-        <section>
-            <h1> La sémantique </h1>
+        <section id="css">
+            <h2> Le CSS </h2>
+            <p> Dans la partie suivante, nous allons découvrir les points suivants au sujet du CSS : </p>
+            <ul>
+                <li><a href="#base-css">Qu'est ce que le CSS</a></li>
+                <li><a href="#position-absolute">Le style position: absolute;</a></li>
+            </ul>
+        </section>
+
+        <section id="base-css">
+            <h3> Le bases du CSS </h3>
+            <p> A présent que tu maitrise l'ajout de contenu dans la page, il faut apprendre à le mettre en page, c'est à dire lui donnée un <em>style</em> incroyable !</p>
+            <p> Pour cela, découvre qu'est ce qu'est le CSS ! <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/36092/exercices-css/introduction">https://tech.io/playgrounds/36092/exercices-css/introduction</a></p>
+            <p> Et exerce toi sur les petits exercices suivants : <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/36092/exercices-css/base-css">https://tech.io/playgrounds/36092/exercices-css/base-css/a></a> <em> Tu ne dois pas faire tous les exercices mais apprendre à écrire du CSS.</em></p>
+        
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Comment appliquer du style sur de l'html </li>
+                    <li> S'exercer !</li>
+                </ul>
+            </details>
+
+        </section>
+
+        <section id="position-absolute">
+            <h3> Le style position: absolute </h2>
+            <p> Voici un lien <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/CSS/position">https://developer.mozilla.org/fr/docs/Web/CSS/position</a> propose différents exercices pour apprendre à styliser de l'html. Le but ici est que vous manipulier le concept et non pas que vous réussisiez parfaitement tous les exercices. </p>
+
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir les styles : </summary>
+            
+                <ul>
+                    <li> position </li>
+                    <li> top </li>
+                    <li> left </li>
+                    <li> right </li>
+                    <li> bottom </li>
+                </ul>
+            </details>
+
+            <hr />
+        </section>
+
+        <section id="javascript">
+            <h2> Le Javascript </h2>
+            <p> Pour terminer, voici un lien pour appréhender le Javascript. <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/83722/exercice-javascript">https://tech.io/playgrounds/83722/exercice-javascript</a>. </p>
+            <p> Ainsi qu'une méthode qui sera utilisé, <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById"><em>getElementById</em></a> : <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById">https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById</a></p>
+        
+            <details open disabled>
+                <summary> Dans cette partie, l'important est de retenir : </summary>
+                <ul>
+                    <li> Qu'est ce qu'une fonction / méthode </li>
+                    <li> L'arithmétique </li>
+                    <li> getElementById </li>
+                </ul>
+            </details>
+
+            <hr/>
+        </section>
+
+        <section id="bonus">
+            <h2> Petit bonus </h2>
+            <p> S'il te reste du temps sur cette petite matinée, tu peux continuer ta lecture pour en apprendre plus sur le web. </p>
+            <p> Voici la liste des points bonus :</p>
+            <ul>
+                <li> <a href="#semantique">La sémantique du web</a></li>
+                <li> <a href="#type-de-css">Les types de CSS</a></li>
+                <li> <a href="#jeu-css">Jeu sur les selecteurs en CSS</a></li>
+            </ul>
+        </section>
+
+        <section id="semantique">
+            <h3> La sémantique </h3>
             <p> Un des éléments important dans la construction d'une page en html est la sémantique. </p>
             <p> Il s'agit de l'art d'organiser les différents bloc pour que le naviguateur puisse les interpréter au mieux. Cela aide aussi Google et les autres moteurs de rechercher à comprendre ce qui se situe dans le site web. </p>
             <p> Voici un lien pour en apprendre plus au sujet de la sémantique d'une page : <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/35475/exercices-html/la-semantique">https://tech.io/playgrounds/35475/exercices-html/la-semantique</a></p>
@@ -91,59 +194,22 @@
                 </ul>
                 <p style="margin: 0; padding: 0;"> Et non pas de savoir faire l'exercice parfaitement. </p>
             </details>
-
-            <hr/>
         </section>
 
-        <section>
-            <h1> Le CSS </h1>
-            <p> A présent que tu maitrise l'ajout de contenu dans la page, il faut apprendre à le mettre en page, c'est à dire lui donnée un <em>style</em> incroyable !</p>
-            <p> Pour cela, découvre les bases du CSS ! <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/36092/exercices-css/introduction">https://tech.io/playgrounds/36092/exercices-css/introduction</a> </p>
-
-            <details open disabled>
-                <summary> Dans cette partie, l'important est de retenir : </summary>
-                <ul>
-                    <li> Comment appliquer du style sur de l'html </li>
-                </ul>
-            </details>
-
-            <hr/>
+        <section id="type-de-css">
+            <h3> Les différents types de CSS </h3>
+            <p> Il existe 3 moyens d'injecter du CSS. </p>
+            <ul>
+                <li>Inline</li>
+                <li>Interne</li>
+                <li>Externe</li>
+            </ul>
+            <p> Pour en apprendre plus sur ces différents type, tu peux consulter le lien suivant : <a target="_blank" rel="noopener noreferrer" href="https://www.hostinger.fr/tutoriels/style-css">https://www.hostinger.fr/tutoriels/style-css</a></p>
         </section>
 
-        <section>
-            <h1> Les bases du CSS </h1>
-            <p> Les différents types de styles : <a target="_blank" rel="noopener noreferrer" href="https://www.hostinger.fr/tutoriels/style-css">https://www.hostinger.fr/tutoriels/style-css</a> </p>
-            <p> Le style <em>position: absolute</em>. Pour cela, voici une documentation <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/CSS/position">https://developer.mozilla.org/fr/docs/Web/CSS/position</a> </p>
-            <p> Et <a target="_blank" rel="noopener noreferrer" href="https://flukeout.github.io/#">un petit jeu</a> pour vous exercer sur les selecteurs CSS.</p>
-            <p> Ainsi que les exos <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/36092/exercices-css/base-css">https://tech.io/playgrounds/36092/exercices-css/base-css</a> propose différents exercices pour apprendre à styliser de l'html. Le but ici est que vous manipulier le concept et non pas que vous réussisiez parfaitement tous les exercices. </p>
-
-            <details open disabled>
-                <summary> Dans cette partie, l'important est de s'exercer ! <em>Vous ne devez pas finir tous les exercices.</em> </summary>
-            
-                <ul>
-                    <li>Les types de styles</li>
-                    <li>La propriété <em>position: aboslute</em></li>
-                </ul>
-            </details>
-
-            <hr />
-        </section>
-
-        <section>
-            <h1> Le Javascript </h1>
-            <p> Pour terminer, voici un lien pour appréhender le Javascript. <a target="_blank" rel="noopener noreferrer" href="https://tech.io/playgrounds/83722/exercice-javascript">https://tech.io/playgrounds/83722/exercice-javascript</a>. </p>
-            <p> Ainsi qu'une méthode qui sera utilisé, <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById"><em>getElementById</em></a> </p>
-        
-            <details open disabled>
-                <summary> Dans cette partie, l'important est de retenir : </summary>
-                <ul>
-                    <li> Qu'est ce qu'une fonction / méthode </li>
-                    <li> L'arithmétique </li>
-                    <li> getElementById </li>
-                </ul>
-            </details>
-
-            <hr/>
+        <section id="jeu-css">
+            <h3> Un petit jeu CSS </h2>
+            <p> Voici le lien pour un petit jeu te permettant de t'entrainer avec les selecteurs CSS. <a target="_blank" rel="noopener noreferrer" href="https://flukeout.github.io/#">https://flukeout.github.io/</a></p>
         </section>
     </main>
 </body>
