@@ -42,10 +42,22 @@ Ce projet ce décompose en 2 parties :
 
 ### Partie théorique
 
-Cette dernière se situe
+Cette dernière se situe dans la page tuto.html. Elle regroupe un ensemble de ressources qui vont permettre à l'élève les connaissances suivantes : 
+- L'HTML
+- Le CSS et plus particulièrement le style position absolute.
+- Le JS ainsi que la méthode getElementById
 
 ### Partie pratique
 
+Cette dernière est découpé en 6 petits exercices à réaliser pour implémenter l'ensemble des fonctionnalités de Point'N'Mon. 
+Elle se compose de : 
+
+- Démarrer la console à l'aide d'une fonction JS.
+- Placer Sacha à l'aide d'un bouton HTML.
+- Se battre contre un adversaire à l'aide de style CSS.
+- Réparer l'interface de combat à l'aide de style CSS.
+- Changer de cartes à l'aide de bouton HTML.
+- Eteindre la console à l'aide d'une fonction JS.
 
 ## Exemple de déroulement de la journée
 
