@@ -43,13 +43,14 @@ Ce projet ce décompose en 2 parties :
 ### Partie théorique
 
 Cette dernière se situe dans la page tuto.html. Elle regroupe un ensemble de ressources qui vont permettre à l'élève les connaissances suivantes : 
-- L'HTML
+- L'HTML.
 - Le CSS et plus particulièrement le style position absolute.
-- Le JS ainsi que la méthode getElementById
+- Le JS ainsi que la méthode getElementById.
 
 ### Partie pratique
 
-Cette dernière est découpé en 6 petits exercices à réaliser pour implémenter l'ensemble des fonctionnalités de Point'N'Mon. 
+Cette dernière est découpé en 6 petits exercices à réaliser pour implémenter l'ensemble des fonctionnalités de Point'N'Mon.
+
 Elle se compose de : 
 
 - Démarrer la console à l'aide d'une fonction JS.
@@ -61,8 +62,7 @@ Elle se compose de :
 
 ## Exemple de déroulement de la journée
 
-**Nom pepsi pour les parties. Raisons des points**
-- 9h00 : Début de journée 
+- 9h00 : Début de journée.
 - 9h00 -> 10h30 : Ice breaking, Dialogue avec l'élève ou l'on peut : 
     + Se présenter ainsi que son cursus. Cela permet à l'élève de :
         * Savoir ce qu'il souhaite / pourrait faire.
@@ -75,27 +75,9 @@ Elle se compose de :
 - 10h30 -> 12h : Monté en compétences en autonomie :
     + Appréhender les différentes technologies du web
     + Retenir comment construire un petit site web
-- 14h -> 15h : Fin de monté en compétences
-- 15h -> 17h : Réalisation d'un projet fun
+- 14h -> 15h : Fin de monté en compétences.
+- 15h -> 17h : Réalisation d'un projet fun :
     + Appliquer les nouvelles compétences
     + Avoir un côté ludique au développement
     + Maintenir l'attention de l'élève 
-- 17h : Fin de journée
-
-## Encadrement nécéssaire
-
-### Durant la théorie
-
-Cette partie peut se réaliser en grande partie en autonomie. L'élève va y acquérir les compétences nécéssaire à la réalisation du projet qui sont :
-
-- Les balises HTML avec attributs
-- Un peu de CSS notamment le style 'position: absolute'
-- Un peu de JS avec l'écriture de fonction
-
-Les différents exercices présent sur tech.io ne sont pas toujours évident. Il sera surement nécéssaire d'expliquer certains points techniques.
-
-### Durant le projet
-
-Cette partie est plus ouverte est n'est guidé que par ce projet. Il se peut que l'élève est plus de questions sur cette partie. 
-
-Il sera aussi d'accompagner l'élève sur l'usage de VSCode ainsi que de naviguer entre les différents fichier html, css et js. 
+- 17h : Fin de journée.
