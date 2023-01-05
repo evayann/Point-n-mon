@@ -13,13 +13,15 @@
 - Durée : 1 jour
 - Niveau : Élève de 3ème / Toute personnes sans base web
 - Encadrement : 
+  - 1h de discussion avec l'élève, Ice Breaking
+  - 2h d'aide lors des phases d'exercices & de projet
 
 ## Contenu du projet
 
 Ce projet ce décompose en 2 parties : 
 
 - Partie théorique : Cours sur le web
-- Partie pratique : Développement d'un projet fun
+- Partie pratique : Développement d'un projet
 
 ### Architecture du projet
 
@@ -42,23 +44,27 @@ Ce projet ce décompose en 2 parties :
 
 ### Partie théorique
 
-Cette dernière se situe dans la page tuto.html. Elle regroupe un ensemble de ressources qui vont permettre à l'élève les connaissances suivantes : 
-- L'HTML.
-- Le CSS et plus particulièrement le style position absolute.
-- Le JS ainsi que la méthode getElementById.
+Cette dernière se situe dans la page tuto.html. Elle regroupe un ensemble de ressources réparti entre : 
+
+- Des cours et exercices issues de [tech.io](https://tech.io) pour découvrir l'html, le css et le js.
+- Des liens vers de la [documentation MDN](https://developer.mozilla.org/fr/docs/Web) pour apprendre à lire une documentation.
 
 ### Partie pratique
 
-Cette dernière est découpé en 6 petits exercices à réaliser pour implémenter l'ensemble des fonctionnalités de Point'N'Mon.
+Cette dernière est découpé en 6 petits exercices à réaliser pour implémenter l'ensemble des fonctionnalités de Point'N'Mon. Ces exercices amenerons à l'écriture de :
 
-Elle se compose de : 
+- 2 fonctions javascript
+- 5 boutons html
+- 2/3 classes css
 
-- Démarrer la console à l'aide d'une fonction JS.
-- Placer Sacha à l'aide d'un bouton HTML.
-- Se battre contre un adversaire à l'aide de style CSS.
-- Réparer l'interface de combat à l'aide de style CSS.
-- Changer de cartes à l'aide de bouton HTML.
-- Eteindre la console à l'aide d'une fonction JS.
+L'implémentation de ces fonctionnalités est amené à l'aide de l'histoire suivante :
+
+- Pour jouer, démarrerons la console.
+- Plaçons Sacha pour dialoguer avec lui.
+- Plaçons un adversaire pour lancer un combat de pokémon.
+- Réparer l'interface de combat.
+- Changer de carte afin de voir de nouvelle contré.
+- Pour finir, éteindre la console pour finir la partie.
 
 ## Exemple de déroulement de la journée
 
