@@ -23,10 +23,10 @@ Ce projet ce décompose en 2 parties :
 - Partie théorique : Cours sur le web
 - Partie pratique : Développement d'un projet
 
-Pour faciliter le partage du projet entre encadrant et élève, 2 branches sont a disposition.
+⚠️ Pour faciliter le partage du projet entre encadrant et élève, 2 branches sont a disposition. ⚠️
 
-- La branche main (celle-ci) qui contient la correction de la partie pratique destinée à l'encadrant.
-- La branche exo qui ne contient PAS la correction de la partie pratique destinée à l'élève.
+- La branche **main** (celle-ci) qui **contient la correction** de la partie pratique destinée à l'encadrant.
+- La branche **exo** qui **ne contient PAS la correction** de la partie pratique destinée à l'élève.
 
 ### Architecture du projet
 
@@ -62,7 +62,7 @@ Cette dernière est découpé en 6 petits exercices à réaliser pour implément
 - 5 boutons html
 - 2/3 classes css
 
-La solution à tous les exercices est disponible sur cette branche main à l'emplacement de l'exercice.
+⚠️ **La solution à tous les exercices est disponible sur cette branche main à l'emplacement de l'exercice.** ⚠️
 
 L'implémentation de ces fonctionnalités est amené à l'aide de l'histoire suivante :
 
