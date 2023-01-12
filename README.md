@@ -23,10 +23,11 @@ Ce projet ce décompose en 2 parties :
 - Partie théorique : Cours sur le web
 - Partie pratique : Développement d'un projet
 
-⚠️ Pour faciliter le partage du projet entre encadrant et élève, 2 branches sont a disposition. ⚠️
+⚠️ Correction de la partie pratique ⚠️
+Pour faciliter le partage du projet entre encadrant et élève, 2 branches sont à disposition.  
 
-- La branche **main** (celle-ci) qui **contient la correction** de la partie pratique destinée à l'encadrant.
-- La branche **exo** qui **ne contient PAS la correction** de la partie pratique destinée à l'élève.
+- La branche **main** (celle-ci), **AVEC** la correction. 
+- La branche **exo**, **SANS** la correction.
 
 ### Architecture du projet
 
