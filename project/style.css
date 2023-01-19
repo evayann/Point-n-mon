@@ -1,7 +1,7 @@
 /* Fonctionnalité : 4 */
 
 /* A faire :  */
-/* Positioner le nom du pokémon en abosule */
+/* Positioner le nom du pokémon en absolue */
 #battle>.pkm-name {
     position: absolute;
 }
