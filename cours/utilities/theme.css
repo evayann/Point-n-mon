@@ -73,6 +73,7 @@ h6 {
     scroll-snap-type: y mandatory;
     overflow-y: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .scroll-container>section {
